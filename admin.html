@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Science Express</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Admin Panel</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Back to Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="admin-panel">
+            <div class="section-content">
+                <h2>Manage Bookings</h2>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Bookings</h3>
+                        <p id="total-bookings">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Students</h3>
+                        <p id="total-students">0</p>
+                    </div>
+                </div>
+
+                <div class="controls-container">
+                    <div class="filter-group">
+                        <label for="time-slot-filter">Filter by Time Slot:</label>
+                        <select id="time-slot-filter">
+                            <option value="all">All Time Slots</option>
+                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                            <option value="10:30 AM - 11:30 AM">10:30 AM - 11:30 AM</option>
+                            <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                        </select>
+                    </div>
+                    <button id="download-btn">Download Bookings (CSV)</button>
+                </div>
+
+                <table id="bookings-table">
+                    <thead>
+                        <tr>
+                            <th>School Name</th>
+                            <th>Contact Person</th>
+                            <th>No. of Students</th>
+                            <th>Time Slot</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookings-list">
+                        </tbody>
+                </table>
+                <p class="no-bookings hidden">No bookings found.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Admin Contact</h4>
+                <p>Email: admin@scienceexpress.org</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Science Express. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
