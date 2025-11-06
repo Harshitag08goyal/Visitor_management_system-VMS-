@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Express - Visitor Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" >
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Science Express</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#registration-section">School Registration</a></li>
+                    <li><a href="#current-bookings-section">Current Bookings</a></li>
+                    <li><a href="admin.html">Admin Panel</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="section-content">
+                <h2>Welcome to Science Express!</h2>
+                <p>
+                    Science Express is an innovative and mobile science exhibition aimed at creating awareness about science and technology. Our mission is to promote scientific temper and curiosity among students and the public. We invite schools to book a visit and experience the wonders of science firsthand.
+                </p>
+                <img src="Gemini_Generated_Image_q9lgcq9lgcq9lgcq.png" alt="Science Express Train" class="section-image">
+                <p>
+                    Join us on a journey of discovery and ignite the scientific spirit in the next generation. Our mobile exhibition brings complex scientific concepts to life through interactive displays and engaging demonstrations.
+                </p>
+            </div>
+        </section>
+
+        <section id="about-us">
+            <div class="section-content">
+                <h2>About Us</h2>
+                <p>
+                    The Science Express is a unique collaboration between various government departments and research institutions. The exhibition is hosted on a specially designed train that travels across the country, showcasing fascinating exhibits on topics ranging from biodiversity and climate change to physics and space exploration. Our goal is to make learning fun and accessible to everyone.
+                </p>
+                <img src="p1.jpeg" alt="Interactive Science Exhibits" class="section-image">
+                <p>
+                    Since its inception, Science Express has covered over 100,000 km, visited more than 300 locations, and attracted millions of visitors, becoming one of the largest mobile science exhibitions in the world.
+                </p>
+            </div>
+        </section>
+
+        <section id="registration-section">
+            <div class="section-content">
+                <h2>School Registration</h2>
+                <p>Please use the form below to book a time slot for your school's visit.</p>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="school-name">School Name:</label>
+                        <input type="text" id="school-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-person">Contact Person:</label>
+                        <input type="text" id="contact-person" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num-students">Number of Students:</label>
+                        <input type="number" id="num-students" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-time">Preferred Time Slot:</label>
+                        <select id="preferred-time" required>
+                            <option value="">--Select a Time Slot--</option>
+                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                            <option value="10:30 AM - 11:30 AM">10:30 AM - 11:30 AM</option>
+                            <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit Booking</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="confirmation-section" class="hidden">
+            <div class="section-content">
+                <h2>Booking Confirmed!</h2>
+                <p id="confirmation-message"></p>
+            </div>
+        </section>
+
+        <section id="current-bookings-section">
+            <div class="section-content">
+                <h2>Current Bookings</h2>
+                <div id="availability-display">
+                    <p>Capacity per slot: 50 students</p>
+                    <div id="time-slots">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info" id="contact-us">
+                <h4>Contact Us</h4>
+                <p>Email: info@scienceexpress.org</p>
+                <p>Phone: +91-123-456-7890</p>
+                <p>Address: 123 Science Park, Knowledge City, India</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Science Express. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
